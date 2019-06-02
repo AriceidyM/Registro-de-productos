@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegistroDeProductos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -7,14 +8,11 @@ using System.Threading.Tasks;
 
 namespace RegistroDeProductos.Resourses.Scripts
 {
-    class Contexto
+    public class Contexto : DbContext
     {
-        public class contexto : DbContext
-        {
-            public DbSet<ProductoDbDataSet> Productos { get; set; }
+        public DbSet<Producto> producto { get; set; }
 
-            public contexto() : base("ConStr")
-            { }
-        }
+        public Contexto() : base("ConStr") { }
     }
+    
 }

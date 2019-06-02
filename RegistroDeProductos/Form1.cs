@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RegistroDeProductos.Entidades;
+using RegistroDeProductos.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,34 +20,10 @@ namespace RegistroDeProductos
             InitializeComponent();
         }
 
-        private  LlenaClase()
+        private void RProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-
-        }
-
-        private void Nuevobutton_Click(object sender, EventArgs e)
-        {
-            ProductoIDnumericUpDown.Value = 0;
-            DescripciontextBox.Clear();
-            ExistenciatextBox.Clear();
-            CostotextBox.Clear();
-            ValorInventariotextBox.Clear();
-        }
-
-        private void Guardarbutton_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Eliminarbutton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Buscarbutton_Click(object sender, EventArgs e)
-        {
-
+            rProducto prod = new rProducto();
+            prod.Show();
         }
     }
 }

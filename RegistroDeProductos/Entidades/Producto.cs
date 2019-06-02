@@ -12,18 +12,18 @@ namespace RegistroDeProductos.Entidades
         [Key]
         public int ProductoId { get; set; }
         public string Descripcion { get; set; }
-        public string Existencia { get; set; }
-        public string Costo { get; set; }
-        public string ValoInventario { get; set; }
+        public int Existencia { get; set; }
+        public int Costo { get; set; }
+        public float ValorInventario { get; set; }
 
 
         public Producto()
         {
             ProductoId = 0;
             Descripcion = string.Empty;
-            Existencia = string.Empty;
-            Costo = string.Empty;
-            ValoInventario = string.Empty;
+            Existencia = 0;
+            Costo = 0;
+            ValorInventario = 0;
             
         }
     }
