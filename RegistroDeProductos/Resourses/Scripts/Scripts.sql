@@ -11,3 +11,8 @@ create table Producto
 	Costo varchar(80),
 	ValorInventario varchar(80)
 );
+
+create table Consultas
+(
+	ValorInventario varchar(80),
+);

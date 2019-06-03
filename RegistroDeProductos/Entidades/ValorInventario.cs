@@ -10,10 +10,12 @@ namespace RegistroDeProductos.Entidades
     public class ValorInventario
     {
         [Key]
+        public int ProductoID { get; set; }
         public string ValorDeInventario { get; set; }
 
         public ValorInventario()
         {
+            ProductoID = 0;
             ValorDeInventario = string.Empty;
         }
     }

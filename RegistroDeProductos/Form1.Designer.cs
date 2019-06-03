@@ -57,6 +57,7 @@
             this.rConsultasToolStripMenuItem.Name = "rConsultasToolStripMenuItem";
             this.rConsultasToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.rConsultasToolStripMenuItem.Text = "rConsultas";
+            this.rConsultasToolStripMenuItem.Click += new System.EventHandler(this.RConsultasToolStripMenuItem_Click);
             // 
             // Form1
             // 

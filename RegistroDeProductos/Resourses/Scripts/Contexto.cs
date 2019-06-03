@@ -12,6 +12,7 @@ namespace RegistroDeProductos.Resourses.Scripts
     {
         public DbSet<Producto> producto { get; set; }
 
+        public  DbSet<ValorInventario> Consultas { get; set; }
         public Contexto() : base("ConStr") { }
     }
     

@@ -1,4 +1,5 @@
 ﻿using RegistroDeProductos.Entidades;
+using RegistroDeProductos.UI.Consultas;
 using RegistroDeProductos.UI.Registros;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,12 @@ namespace RegistroDeProductos
         {
             rProducto prod = new rProducto();
             prod.Show();
+        }
+
+        private void RConsultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rConsultas consu = new rConsultas();
+           consu.Show();
         }
     }
 }

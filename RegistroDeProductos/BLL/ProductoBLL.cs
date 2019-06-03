@@ -20,6 +20,11 @@ namespace RegistroDeProductos.BLL
             {
                 if (db.producto.Add(producto) != null)
                     paso = db.SaveChanges() > 0;
+                ValorInventario inventario = ValorInventarioBLL.Buscar(1);
+
+                inventario.ValorDeInventario += producto.ValorInventario;
+
+                ValorInventarioBLL.Modificar(inventario);
             }
             catch (Exception)
             {
@@ -38,7 +43,8 @@ namespace RegistroDeProductos.BLL
 
             try
             {
-                db.Entry(producto).State = EntityState.Modified;
+                var buscar = db.producto.Find(producto.ProductoId);
+                db.Entry(producto).State = System.Data.Entity.EntityState.Modified;
                 paso = (db.SaveChanges() > 0);
             }
             catch (Exception)
