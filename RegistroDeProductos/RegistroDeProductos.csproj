@@ -136,6 +136,7 @@
     <None Include="Resources\Start-Menu-Search-icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\productos.jpg" />
     <Content Include="Resourses\Scripts\Scripts.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

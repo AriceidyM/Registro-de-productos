@@ -227,5 +227,10 @@ namespace RegistroDeProductos.UI.Registros
                 return;
             }
         }
+
+        private void RProducto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

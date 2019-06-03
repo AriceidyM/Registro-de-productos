@@ -208,6 +208,7 @@
             this.Controls.Add(this.ProductoIDlabel);
             this.Name = "rProducto";
             this.Text = "Registro producto";
+            this.Load += new System.EventHandler(this.RProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProductoIDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
