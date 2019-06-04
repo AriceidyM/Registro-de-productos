@@ -16,3 +16,9 @@ create table Consultas
 (
 	ValorInventario varchar(80),
 );
+
+create table Ubicacion
+(
+	ID int primary key identity,
+	Descripcion varchar(80)
+);

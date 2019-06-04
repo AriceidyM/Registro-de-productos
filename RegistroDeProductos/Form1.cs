@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static RegistroDeProductos.Resourses.Scripts.Contexto;
+using static RegistroDeProductos.DAL.Contexto;
 
 namespace RegistroDeProductos
 {
@@ -32,5 +32,7 @@ namespace RegistroDeProductos
             rConsultas consu = new rConsultas();
            consu.Show();
         }
+
+    
     }
 }

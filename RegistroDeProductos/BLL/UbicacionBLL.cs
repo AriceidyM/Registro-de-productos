@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace RegistroDeProductos.BLL
 {
-    public class ValorInventarioBLL
+    class UbicacionBLL
     {
-        public static ValorInventario Buscar(int id)
+        public static Ubicaciones Buscar(int id)
         {
             Contexto contexto = new Contexto();
-            ValorInventario inventario = new ValorInventario();
+            Ubicaciones Ubicacion = new Ubicaciones();
             try
             {
-                inventario = contexto.Consultas.Find(id);
+                Ubicacion = contexto.Ubicacion.Find(id);
             }
             catch
             {
@@ -28,18 +28,18 @@ namespace RegistroDeProductos.BLL
             {
                 contexto.Dispose();
             }
-            return inventario;
+            return Ubicacion;
         }
 
 
-        public static bool Guardar(ValorInventario inventario)
+        public static bool Guardar(Ubicaciones Ubicacion)
         {
             bool paso = false;
 
             Contexto contexto = new Contexto();
             try
             {
-                if (contexto.Consultas.Add(inventario) != null)
+                if (contexto.Ubicacion.Add(Ubicacion) != null)
                 {
                     paso = contexto.SaveChanges() > 0;
 
@@ -53,14 +53,14 @@ namespace RegistroDeProductos.BLL
             return paso;
         }
 
-        public static bool Modificar(ValorInventario inventario)
+        public static bool Modificar(Ubicaciones Ubicacion)
         {
             bool paso = false;
 
             Contexto contexto = new Contexto();
             try
             {
-                contexto.Entry(inventario).State = EntityState.Modified;
+                contexto.Entry(Ubicacion).State = EntityState.Modified;
                 paso = (contexto.SaveChanges() > 0);
 
                 contexto.Dispose();
@@ -71,20 +71,27 @@ namespace RegistroDeProductos.BLL
             }
             return paso;
         }
-        public static ValorInventario Eliminar(int id)
+        public static bool Eliminar(int id)
         {
-            Contexto contexto = new Contexto();
-            ValorInventario inventario = new ValorInventario();
+            bool paso = false;
+            Contexto db = new Contexto();
+
             try
             {
-                inventario = contexto.Consultas.Find(id);
-                contexto.Dispose();
+                var eliminar = db.Ubicacion.Find(id);
+                db.Entry(eliminar).State = EntityState.Deleted;
+
+                paso = (db.SaveChanges() > 0);
             }
             catch (Exception)
             {
                 throw;
             }
-            return inventario;
+            finally
+            {
+                db.Dispose();
+            }
+            return paso;
         }
     }
 }

@@ -232,5 +232,16 @@ namespace RegistroDeProductos.UI.Registros
         {
 
         }
+
+        private void Descripcionlabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            RegistroDeUbicaciones ru = new RegistroDeUbicaciones();
+            ru.ShowDialog();
+        }
     }
 }

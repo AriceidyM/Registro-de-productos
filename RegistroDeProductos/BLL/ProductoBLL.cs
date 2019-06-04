@@ -1,5 +1,5 @@
 ﻿using RegistroDeProductos.Entidades;
-using RegistroDeProductos.Resourses.Scripts;
+using RegistroDeProductos.DAL;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
