@@ -19,4 +19,7 @@ namespace RegistroDeProductos
             Application.Run(new Form1());
         }
     }
+
+
+
 }
